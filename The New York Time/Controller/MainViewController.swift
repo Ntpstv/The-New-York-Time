@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-import SwiftUI
+//import SwiftUI
 
 class MainViewController: UIViewController {
     
@@ -43,13 +43,9 @@ class MainViewController: UIViewController {
                 break
                 
             }
-            
-            
+
         }
-        
-        
-        //        self.mainCollectionView.reloadData()
-        
+
     }
     @IBAction func unwindSegueFromSearchTableVC(segue: UIStoryboardSegue){
         
@@ -61,6 +57,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
         
         return headerView
@@ -85,9 +82,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//FIXME: in case that we have more than one storyboard
-        //        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let secondVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+
         if let secondVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
         secondVC.nytItem = nytItem[indexPath.row]
         //        secondVC.detailImageView = imageReceived.imageFromUrl(urlString: imageURL.multimedia.first?.url ?? "")

@@ -13,14 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailImageView: UIImageView!
     @IBOutlet var topLabel: UILabel!
     @IBOutlet var bottomLabel: UILabel!
-    
-//    var picImage: UIImage?
-    
-//    var imageReceived = UIImage()
-//    var name = "https://www.nytimes.com/2022/07/21/books/african-american-dictionary.html"
-//    var selectedImage: String!
-//    var nyt: NYTDataManager?
-//    let manager = NYTDataManager()
+
     var nytItem: Book?
 
 
