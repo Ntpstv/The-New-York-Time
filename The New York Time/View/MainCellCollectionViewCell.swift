@@ -14,8 +14,7 @@ class MainCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var bookImageView: UIImageView!
     
     func setView(bookDetail: Book){
-            mainNameLabel.text = bookDetail.title
-            bookImageView.imageFromUrl(urlString: bookDetail.multimedia.first?.url ?? "")
+           
         
     }
     
